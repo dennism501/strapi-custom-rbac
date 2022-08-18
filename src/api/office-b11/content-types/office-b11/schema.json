@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_b11s",
+  "info": {
+    "singularName": "office-b11",
+    "pluralName": "office-b11s",
+    "displayName": "Office",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "offices"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article",
+      "inversedBy": "office"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_hero_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Hero": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Caption": {
+      "type": "string"
+    }
+  }
+}

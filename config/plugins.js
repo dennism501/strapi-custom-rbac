@@ -1,6 +1,6 @@
 module.exports = {
 	"edit-view-rback": {
-		enabled: true,
+		enabled: false,
 		resolve: "./src/plugins/edit-view-rback"
 	}
 }

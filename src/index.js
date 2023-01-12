@@ -30,5 +30,18 @@ module.exports = {
         };
       },
     });
+    await strapi.admin.services.permission.conditionProvider.register({
+      displayName: "Role Matches Category",
+      name: "role-matches-category",
+      async handler(user) {
+        const validCategories = user.roles.map(
+          (role) => role.name.split("-")[0]
+        );
+        console.log("Category: ",validCategories);
+        return {
+          "category.name": { $in: validCategories },
+        };
+      },
+    });
   },
 };
